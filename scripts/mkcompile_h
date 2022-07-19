@@ -54,7 +54,7 @@ else
 fi
 
 LINUX_COMPILE_BY="Kakashi"
-LINUX_COMPILE_HOST="Local-Host"
+LINUX_COMPILE_HOST="Android-Building"
 UTS_VERSION="#$VERSION"
 CONFIG_FLAGS=""
 if [ -n "$SMP" ] ; then CONFIG_FLAGS="SMP"; fi

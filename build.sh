@@ -1,6 +1,6 @@
 export ARCH=arm64 && export SUBARCH=arm64
-export PATH="/home/kakashi/gabuters-clang/bin:$PATH"
-export STRIP="/home/kakashi/gabuters-clang/aarch64-linux-gnu/bin/strip"
+export PATH="/home/kakashi/gabuters-clang-14/bin:$PATH"
+export STRIP="/home/kakashi/gabuters-clang-14/aarch64-linux-gnu/bin/strip"
 make tissot_defconfig O=out
 make -j$(nproc --all) O=out \
 ARCH=arm64 \
