@@ -27,13 +27,13 @@ CLANG_DIR="${HOME}"/proton-clang
 
 # Defconfig
 DEFCONFIG="tissot_defconfig"
-REGENERATE_DEFCONFIG="false" # unset if don't want to regenerate defconfig
+REGENERATE_DEFCONFIG="true" # unset if don't want to regenerate defconfig
 
 # Costumize
-KERNEL="Cakeby_Kernel"
-RELEASE_VERSION="3.0.1"
+KERNEL="Cakeby"
+RELEASE_VERSION="3.0.2"
 DEVICE="Tissot"
-KERNELTYPE="NotOC-Not4GSI"
+KERNELTYPE="NonOC-Not4Gsi"
 KERNEL_SUPPORT="Android 10 - 12.1"
 KERNELNAME="${KERNEL}-${DEVICE}-${KERNELTYPE}-$(TZ=Asia/Jakarta date +%y%m%d-%H%M)"
 TEMPZIPNAME="${KERNELNAME}.zip"
@@ -64,7 +64,7 @@ tg_cast() {
 # Regenerating Defconfig
 regenerate() {
     cp out/.config arch/arm64/configs/"${DEFCONFIG}"
-    git add arch/arm64/configs/"${DEFCONFIG}"
+    git add arch/arm64/configs/"${DEFCONFIG}" build-notb.sh
     git commit -m "defconfig: Regenerate"
 }
 
@@ -134,5 +134,5 @@ tg_cast "Build for ${DEVICE} with ${COMPILER_STRING} <b>succeed</b> took $((DIFF
 
 tg_cast  "<b>Changelog :</b>" \
     "Merged to LA.UM.10.6.2.r1-02300-89xx.0" \
-    "Set default gov to <code>blu_schedutil</code> (hopefully it can reduce battery drain)" \
-    "Look at build type before installing!" \
+    "Set default gov to <b>blu_schedutil</b> (hopefully it can reduce battery drain)" \
+    "Look at build type before flashing!"
