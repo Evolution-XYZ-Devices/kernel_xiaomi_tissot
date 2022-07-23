@@ -1,0 +1,1 @@
+export ARCH=arm64
