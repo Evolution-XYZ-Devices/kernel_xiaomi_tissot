@@ -54,6 +54,7 @@ else
 fi
 
 LINUX_COMPILE_BY="hklknz"
+LINUX_COMPILE_HOST="hklknz-server"
 
 UTS_VERSION="#$VERSION"
 CONFIG_FLAGS=""
